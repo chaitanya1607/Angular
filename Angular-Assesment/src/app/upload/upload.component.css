@@ -1,0 +1,102 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #e7dede;
+  padding: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.innercard {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.innercard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+p {
+  font-size: 0; /* Fixes inline block spacing */
+}
+span {
+  width: 50%;
+  display: inline-block;
+}
+span.align-right {
+  text-align: right;
+}
+
+span a {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: black;
+}
+
+#climestatus {
+  color: black;
+}
+#documentsReceived {
+  color: black;
+}
+
+.arrow {
+  border: solid rgb(70, 147, 209);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.left {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(135deg);
+}
+
+#addFiles {
+  border-radius: 5px;
+  padding: 10px;
+  background: rgb(22, 37, 122);
+  display: table;
+  color: #fff;
+  float: right;
+  margin-right: 10px;
+  margin-top: -15px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#deleteButton {
+  background-color: #f44336;
+  float: right;
+  margin-right: 10px;
+  border-radius: 5px;
+}

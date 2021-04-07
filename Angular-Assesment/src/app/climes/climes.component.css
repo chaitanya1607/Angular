@@ -1,0 +1,137 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 50%;
+}
+
+.card {
+  margin: auto;
+  width: 80%;
+  border: 3px solid #e7dede;
+  padding: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.innercard {
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 170%;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+
+.innercard:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+p {
+  font-size: 0; /* Fixes inline block spacing */
+}
+span {
+  width: 50%;
+  display: inline-block;
+}
+span.align-right {
+  text-align: right;
+}
+
+span a {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: black;
+}
+
+#climestatus {
+  color: black;
+}
+#documentsReceived {
+  color: black;
+}
+
+.arrow {
+  border: solid rgb(70, 147, 209);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  right: -96%;
+  position: relative;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+#error-circle {
+  background: #eee8e8;
+  background: #990000;
+  border-radius: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#warning {
+  background: rgb(255, 185, 56);
+  border-radius: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+#success {
+  background: green;
+  border-radius: 100px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid red;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid red;
+}

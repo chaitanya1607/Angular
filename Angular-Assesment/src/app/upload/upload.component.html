@@ -1,0 +1,54 @@
+<mat-card style="position: absolute;margin-left:33%;
+    ">
+  <mat-card-header>
+    <mat-tab-group mat-align-tabs="start">
+      <mat-tab label="Clime Status">
+        <a routerLink="" class="nav-link" routerLinkActive="active"><i class="arrow left"></i>Back</a>
+        <div style="margin-top:20px">
+          <strong>Certificates</strong><label id="addFiles">Add Files<input type="file" (change)="certificateUpload($event)"></label>
+        </div>
+        <div *ngIf="!isCertificatesEmpty;else error">
+          <dl>
+            <dt *ngFor="let certificate of certificates;let i=index">
+
+              <mat-card style="margin-top:20px">
+                {{i+1+' . '}}
+                <label>{{certificate.name}}</label><br>
+                <label>{{certificate.size/1048576 | number : '1.2-2'}}MB</label>
+                <button style=" float: right;margin-top:-17px;" mat-raised-button color="warn" (click)="deleteCertificate(certificate.name)">X Delete</button>
+
+              </mat-card>
+
+
+            </dt>
+          </dl>
+
+        </div>
+        <ng-template #error>
+          <mat-card style="margin-top:20px">
+            <strong>Files are pending please add..!</strong>
+          </mat-card>
+        </ng-template>
+        <hr><br>
+        <div>
+          <strong>Medical Reports</strong><label id="addFiles">Add Files <input type="file"  (change)="medicalRecordUpload($event)" required></label>
+        </div>
+        <div *ngIf="!isMedicalReportsEmpty;else error">
+          <dl>
+            <dt *ngFor="let medicalRecord of medicalReports;let i = index">
+              <mat-card style="margin-top:20px">
+                {{i+1+' . '}}
+                <label>{{medicalRecord.name}}</label><br>
+                <label>{{medicalRecord.size/1048576 | number : '1.2-2'}}MB</label>
+                <button style=" float: right;margin-top:-17px;" mat-raised-button color="warn" (click)="deleteMedicalRecord(medicalRecord.name)">X Delete</button>
+              </mat-card>
+
+            </dt>
+          </dl>
+        </div>
+      </mat-tab>
+      <mat-tab label="Documents Received">Demo content</mat-tab>
+    </mat-tab-group>
+
+  </mat-card-header>
+</mat-card>

@@ -1,0 +1,36 @@
+
+<mat-card style="position: absolute;margin-left:33%;
+    ">
+  <mat-card-header>
+    <mat-tab-group mat-align-tabs="start">
+      <mat-tab label="Clime Status">
+        <dl id="patients">
+          <dt *ngFor="let clime of climes; let i = index">
+            <mat-card style="background: #eee8e8; margin-bottom:7px;border-radius: 15px;">
+              <br><strong>Patient Name : </strong>{{clime.patientDetails.firstName+'
+              '+clime.patientDetails.lastName}}<br><br>
+              <strong>Clime Number : </strong>{{clime.claimDetails.claimNumber}}<br>
+
+              <a routerLink="upload" class="nav-link" routerLinkActive="active"><i class="arrow right"></i></a>
+              <br>
+              <strong>Date Submitted : </strong>{{clime.claimDetails.dateSubmitted | date:"MM/dd/yyy"}}<br><br>
+              <div *ngIf="clime.claimDetails.claimStatus==='COMPLETED'">
+                <strong>Clime Status : </strong><label id="success">✓</label>{{'
+                '+clime.claimDetails.claimStatus}}<br><br>
+              </div>
+              <div *ngIf="clime.claimDetails.claimStatus==='ADDITIONAL_INFO_REQUIRED'">
+                <strong>Clime Status : </strong><label id="warning">!</label>{{'
+                '+clime.claimDetails.claimStatus}}<br><br>
+              </div>
+              <div *ngIf="clime.claimDetails.claimStatus==='NOT_RECEIVED'">
+                <strong>Clime Status : <label id="error-circle">X</label></strong>
+                {{' '+clime.claimDetails.claimStatus}}<br><br>
+              </div>
+            </mat-card>
+          </dt>
+        </dl>
+      </mat-tab>
+      <mat-tab label="Documents Received">Demo content</mat-tab>
+    </mat-tab-group>
+  </mat-card-header>
+</mat-card>
